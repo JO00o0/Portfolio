@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Youssef | My Portfolio" data-ar="يوسف | بورتفيلو">Youssef | My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <div id="splash">
+        <canvas id="vortexCanvas"></canvas>
+        <div class="click-hint" id="splashHint" data-en="Click anywhere to enter" data-ar="انقر في أي مكان للدخول">Click anywhere to enter</div>
+    </div>
+
+    <div class="lang-switcher hidden" id="langSwitcher">
+        <button id="langToggle">العربية</button>
+    </div>
+
+    <div id="main-page" class="hidden">
+        <section id="main-portal">
+            <div class="welcome-container">
+                <h1 class="welcome-text" id="typewriter" data-en="Hello, I'm Youssef" data-ar="مرحبا انا يوسف"></h1>
+            </div>
+
+            <div class="mirrors-grid" id="mirrorsGrid">
+                <div class="mirror-card right projects-card" onclick="scrollToSection('projects-section')">
+                    <h2 class="mirror-title" data-en="Projects" data-ar="المشاريع">Projects</h2>
+                    <div class="mirror-desc">
+                        <img src="3.jpeg" alt="Projects illustration" />
+                    </div>
+                </div>
+
+                <div class="mirror-card center about-card" onclick="scrollToSection('about-section')">
+                    <h2 class="mirror-title" data-en="About Me" data-ar="تعريف عن نفسي">About Me</h2>
+                    <div class="mirror-image">
+                        <img src="2.jpeg" alt="About me illustration" />
+                    </div>
+                </div>
+
+                <div class="mirror-card left contact-card" onclick="scrollToSection('contact-section')">
+                    <h2 class="mirror-title" data-en="Contact" data-ar="اتصل بي">Contact</h2>
+                    <div class="mirror-desc">
+                        <img src="1.jpeg" alt="Contact illustration" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects-section">
+            <h2 class="section-title" data-en="Software Projects" data-ar="المشاريع البرمجية">Software Projects</h2>
+            
+            <div class="content-container">
+                <div class="projects-list">
+                    <div class="project-detailed-card ai-spec">
+                        <div class="project-header">
+                            <div class="project-name" data-en="AI Project Model" data-ar="🧠 نموذج الذكاء الاصطناعي (AI Project)">AI Project Model</div>
+                            <div class="project-tag" data-en="Artificial Intelligence" data-ar="ذكاء اصطناعي">Artificial Intelligence</div>
+                        </div>
+                        <p class="project-text" data-en="An advanced NLP-based model that generates smart code and understands complex development commands." data-ar="مشروع متطور يعتمد على خوارزميات معالجة اللغات الطبيعية (NLP) وتوليد الأكواد البرمجية بشكل ذكي وتفاعلي، صُمم ليكون مساعداً برمجياً ذكياً يفهم الأوامر المعقدة ويسهل عملية التطوير.">An advanced NLP-based model that generates smart code and understands complex development commands.</p>
+                    </div>
+
+                    <div class="project-detailed-card">
+                        <div class="project-header">
+                            <div class="project-name" data-en="Secret Chat App" data-ar="💬 تطبيق Secret Chat">Secret Chat App</div>
+                            <div class="project-tag" data-en="Android Studio / Java" data-ar="Android Studio / Java">Android Studio / Java</div>
+                        </div>
+                        <p class="project-text" data-en="A secure Android messaging app focused on encryption, custom UI and anti-spying protections." data-ar="تطبيق مراسلة فوري للأندرويد يركز على التشفير، واجهة مستخدم مخصصة، وحماية ضد التجسس.">A secure Android messaging app focused on encryption, custom UI and anti-spying protections.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="back-to-top" data-en="↑ Back to mirrors" data-ar="↑ عودة للمرايا" onclick="scrollToSection('main-portal')">↑ Back to mirrors</button>
+        </section>
+
+        <section id="about-section">
+            <h2 class="section-title" data-en="Profile" data-ar="الملف الشخصي">Profile</h2>
+            
+            <div class="content-container">
+                <div class="about-text">
+                    <p data-en="Welcome, I am Youssef." data-ar="أهلاً بك، أنا يوسف.">Welcome, I am Youssef.</p>
+                    <p data-en="Software developer with experience in game development, applications and networking." data-ar="مطور برمجيات، درست عدد مجالات منها تطوير الالعاب، التطبيقات و الشبكات">Software developer with experience in game development, applications and networking.</p>
+                    <p data-en="I also design websites and focus on cybersecurity and managing different Linux distributions." data-ar="بجانب تصميم مواقع الويب، الاهتمام ب الامن السيبراني و اداره توزيعات لينكس المختلفه">I also design websites and focus on cybersecurity and managing different Linux distributions.</p>
+                    
+                    <h3 style="color: #00f2fe; margin-top: 25px; margin-bottom: 10px; font-size: 1.2rem;" data-en="🛠️ Current tools & languages:" data-ar="🛠️ التقنيات واللغات الحالية:">🛠️ Current tools & languages:</h3>
+                    <div class="skills-container">
+                        <span class="skill-badge">🐍 Python </span>
+                        <span class="skill-badge">☕ Java (Android)</span>
+                        <span class="skill-badge">💙 Flutter</span>
+                        <span class="skill-badge">🌐 HTML / CSS / JS</span>
+                        <span class="skill-badge">🛡️ Kali Linux</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="back-to-top" data-en="↑ Back to mirrors" data-ar="↑ عودة للمرايا" onclick="scrollToSection('main-portal')">↑ Back to mirrors</button>
+        </section>
+
+        <section id="contact-section">
+            <h2 class="section-title" data-en="Contact Protocol" data-ar="بروتوكول الاتصال">Contact Protocol</h2>
+            
+            <div class="content-container">
+                <div class="contact-methods">
+                    <div class="contact-box">
+                        <h3 data-en="✉️ Email" data-ar="✉️ البريد الإلكتروني">✉️ Email</h3>
+                        <p>yossefhassan788@gmail.com</p>
+                    </div>
+                    
+                    <div class="contact-box">
+                        <h3 data-en="🔗 QR Code" data-ar="🔗 رمز الاستجابة السريع (QR Code)">🔗 QR Code</h3>
+                        <p data-en="Scan the code to visit my digital profiles." data-ar="امسح الكود للانتقال إلى جميع حساباتي الرقمية">Scan the code to visit my digital profiles.</p>
+                        <div class="qr-switcher">
+                            <button onclick="updateQR('instagram', this)" class="qr-nav-btn active">📸 Instagram</button>
+                            <button onclick="updateQR('github', this)" class="qr-nav-btn">🐙 GitHub</button>
+                            <button onclick="updateQR('discord', this)" class="qr-nav-btn">💬 Discord</button>
+                            <button onclick="updateQR('whatsapp', this)" class="qr-nav-btn">📱 WhatsApp</button>
+                        </div>
+                        <div id="qrcode" class="qr-display-container"></div>
+                    </div>
+                    
+                    <div class="contact-box">
+                        <h3 data-en="🌐 Location" data-ar="🌐 الموقع الجغرافي">🌐 Location</h3>
+                        <p data-en="Egypt" data-ar="مصر">Egypt</p>
+                    </div>
+                </div>
+                <p style="text-align: center; color: #64748b; font-size: 0.9rem; margin-top: 20px;" data-en="You can send a message at any time. I will reply once I read the connection code." data-ar="يمكنك إرسال رسالة في أي وقت، وسأقوم بالرد عليك فور قراءة شيفرة الاتصال.">You can send a message at any time. I will reply once I read the connection code.</p>
+            </div>
+
+            <button class="back-to-top" data-en="↑ Back to mirrors" data-ar="↑ عودة للمرايا" onclick="scrollToSection('main-portal')">↑ Back to mirrors</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
